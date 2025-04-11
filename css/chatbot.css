@@ -1,0 +1,191 @@
+
+
+
+       body {
+        margin: 0;
+        font-family: 'Poppins', sans-serif;
+        background-color: #0d0d0d;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      
+      /* Chat container to limit width */
+      .chat-container {
+        width: 100%;
+        max-width: 1000px;
+        height: 95vh;
+        box-shadow: 0 0 20px rgba(255, 193, 7, 0.2);
+        border-radius: 12px;
+        overflow: hidden;
+        background-color: #111;
+      }
+      
+      /* Chatbot box fills the container */
+      #chatbot-box {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+      
+      #chatbot-header {
+        text-align: center;
+        padding: 18px;
+        background-color: #1c1c1c;
+        font-size: 20px;
+        font-weight: bold;
+        color: #ffc107;
+        border-bottom: 1px solid #333;
+      }
+      
+      #chat-log {
+        flex: 1;
+        padding: 20px;
+        overflow-y: auto;
+        background: #1c1c1c;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+      
+      .user-message, .bot-message {
+        transition: transform 0.3s ease, opacity 0.3s ease;
+        padding: 12px 18px;
+        margin: 4px 0;
+        border-radius: 20px;
+        max-width: 80%;
+        word-wrap: break-word;
+        font-weight: 500;
+        animation: fadeInUp 0.3s ease;
+        line-height: 1.5;
+      }
+      
+      .user-message {
+        align-self: flex-end;
+        background-color: #ffc107;
+        color: #000;
+        border-bottom-right-radius: 0;
+      }
+      
+      .bot-message {
+        align-self: flex-start;
+        background-color: #2a2a2a;
+        color: #fff;
+        border-bottom-left-radius: 0;
+      }
+      
+      #chat-form {
+        display: flex;
+        padding: 16px;
+        border-top: 1px solid #333;
+        background: #0d0d0d;
+        gap: 12px;
+      }
+
+      
+      #user-input {
+        flex: 1;
+        padding: 12px 16px;
+        border-radius: 20px;
+        border: 1px solid #444;
+        background: #222;
+        color: #fff;
+        font-size: 15px;
+        outline: none;
+      }
+      
+      #chat-form button {
+        background-color: #ffc107;
+        border: none;
+        color: #000;
+        padding: 12px 18px;
+        border-radius: 50px;
+        cursor: pointer;
+        font-size: 15px;
+        font-weight: 600;
+        transition: background-color 0.3s ease;
+      }
+      
+      #chat-form button:hover {
+        background-color: #fde047;
+      }
+      
+      @keyframes fadeInUp {
+        from {
+          transform: translateY(10px);
+          opacity: 0;
+        }
+        to {
+          transform: translateY(0px);
+          opacity: 1;
+        }
+      }
+      
+      /* Mobile responsiveness */
+      @media (max-width: 600px) {
+        .chat-container {
+          width: 100%;
+          height: 100vh;
+          border-radius: 0;
+        }
+      
+        #chat-log {
+          padding: 16px;
+        }
+      
+        .user-message, .bot-message {
+          max-width: 90%;
+          font-size: 14px;
+          padding: 10px 14px;
+        }
+      
+        #chat-form {
+          flex-direction: column;
+        }
+      
+        #chat-form button {
+          width: 100%;
+        }
+      }
+      
+
+      #close-chatbot {
+        position: absolute;
+        top: 16px;
+        right: 20px;
+        background: transparent;
+        border: none;
+        font-size: 24px;
+        color: #ffc107;
+        cursor: pointer;
+        transition: color 0.2s ease;
+      }
+      
+      #close-chatbot:hover {
+        color: #fff;
+      }
+
+      
+      #chatbot-header {
+        position: relative;
+        text-align: center;
+        padding: 18px;
+        background-color: #1c1c1c;
+        font-size: 20px;
+        font-weight: bold;
+        color: #ffc107;
+        border-bottom: 1px solid #333;
+      }
+      
+
+      .zoom-effect {
+        overflow: hidden;
+        transition: transform 0.3s ease-out;
+      }
+      
+      .zoom-effect:hover {
+        transform: scale(1.1);
+      }

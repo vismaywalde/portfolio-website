@@ -27,6 +27,10 @@
 
 <style>
 
+
+
+	
+
 /*======================================
 //--//-->   ABOUT
 ======================================*/
@@ -122,6 +126,244 @@
 }
 
 
+
+
+
+
+
+
+
+.hidden {
+  display: none;
+  
+}
+
+
+#chatbot-header {
+	text-align: center;
+}
+
+#chatbot-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+}
+
+#chatbot-toggle {
+  background-color: #ffc107;
+  border: none;
+  border-radius: 50%;
+  color: #000;
+  width: 60px;
+  height: 60px;
+  font-size: 26px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(250, 204, 21, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+#chatbot-toggle:hover {
+  background-color: #fde047; 
+}
+
+#chatbot-box {
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  width: 320px;
+  height: 430px;
+  background: #111;
+  border: 1px solid #333;
+  border-radius: 14px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 6px 20px rgba(250, 204, 21, 0.3);
+  font-family: 'Poppins', sans-serif;
+  color: white;
+}
+
+#chat-log {
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto;
+  background: #1c1c1c;
+}
+
+.user-message {
+  align-self: flex-end;
+  background-color: #ffc107;
+  color: #000;
+  padding: 8px 12px;
+  margin: 4px;
+  border-radius: 16px 16px 0 16px;
+  max-width: 80%;
+  word-wrap: break-word;
+  font-weight: 500;
+}
+
+.bot-message {
+  align-self: flex-start;
+  background-color: #2a2a2a;
+  color: #fff;
+  padding: 8px 12px;
+  margin: 4px;
+  border-radius: 16px 16px 16px 0;
+  max-width: 80%;
+  word-wrap: break-word;
+
+}
+
+#chat-form {
+  display: flex;
+  padding: 8px;
+  border-top: 1px solid #333;
+  background: #0d0d0d;
+}
+
+#user-input {
+  flex: 1;
+  padding: 8px 12px;
+  border-radius: 20px;
+  border: 1px solid #333;
+  background: #222;
+  color: #fff;
+  font-size: 14px;
+  outline: none;
+ 
+}
+
+#chat-form button {
+  background-color: #ffc107;
+  border: none;
+  color: #000;
+  padding: 8px 14px;
+  margin-left: 8px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+ 
+}
+
+#chat-form button:hover {
+  background-color: #fde047;
+}
+
+
+#chatbot-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+/* Chat button */
+#chatbot-toggle {
+  width: 75px;
+  height: 75px;
+ 
+  border-radius: 50%;
+  border: 16px;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+/* Hidden by default */
+/* #chatbox {
+  display: none;
+  position: absolute;
+  bottom: 60px; 
+  right: 0;
+  background-color: #1f1f1f;
+  color: white;
+  padding: 15px;
+  border-radius: 10px;
+  width: 250px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+} */
+
+
+#chatbox {
+  position: absolute;
+  bottom: 70px; /* Adjust to move it above the button */
+  right: 0;
+  background-color: #1f1f1f;
+  color: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  /* font-size: 14px; */
+  /* max-width: 220px; */
+  width: 250px;
+  display: none;
+  /* z-index: 10; */
+  /* transition: opacity 0.3s ease; */
+}
+
+/* Messenger-style arrow (tail) */
+#chatbox::after {
+  content: "";
+  position: absolute;
+  bottom: -10px; /* Position it below the box */
+  right: 20px;
+  border-width: 10px 10px 0 10px;
+  border-style: solid;
+  border-color: #1f1f1f transparent transparent transparent;
+}
+
+
+
+/* Show on hover */
+#chatbot-container:hover #chatbox {
+  display: block;
+}
+
+
+
+#chatbot-hover-area:hover #chatbox {
+  display: block;
+}
+
+
+
+
+
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+  gap: 20px;
+}
+
+.skill-item span {
+  display: inline-block;
+  width: 100%;
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+.progress {
+  background-color: #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 10px;
+}
+
+.progress-bar {
+  background-color: #ffc107;
+  height: 100%;
+  transition: width 0.4s ease;
+}
+
+
+
+
 </style>
 
 
@@ -140,6 +382,8 @@
 	        <ul class="navbar-nav nav ml-auto">
 	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
 	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+			  <li class="nav-item"><a href="#skills-section" class="nav-link"><span>Skills</span></a></li>
+
 			  <li class="nav-item"><a href="#Experience-section" class="nav-link"><span>Experience</span></a></li>
 			  <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
 	          <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
@@ -219,76 +463,46 @@
     	<div class="container">
 			<div class="row">
 				<div class="row d-flex align-items-stretch">
-				<div class="row d-flex">
-					<!-- <div class="col-md-6 col-lg-5 d-flex"> -->
-						<!-- <div class="img-about img d-flex align-items-stretch"> -->
-							<!-- <div class="overlay"> -->
+				<!-- <div class="row d-flex"> -->
+					<div class="col-md-6 col-lg-5 d-flex">
+						<div class="img-about img d-flex align-items-stretch">
+							<div class="overlay">
 								<!-- <div class="row"> -->
 									<!-- <div class="col-sm-6 col-md-5"> -->
-									  <!-- <div class="about-img"> -->
-										<!-- <img src="images/about-me.png" class="img-fluid rounded b-shadow-a" alt=""> -->
-									  <!-- </div> -->
+									  <!-- <div class="about-img">
+										<img src="images/about-me.png" class="img-fluid rounded b-shadow-a" alt="">
+									  </div> -->
 									<!-- </div> -->
 									<!-- Details next to profile image -->
 									<!-- <div class="col-sm-6 col-md-7"> -->
-									  <!-- <div class="about-info"> -->
-										<!-- <p><span class="title-s">Name: </span> <span>Rishabh Mishra</span></p> -->
-										<!-- <p><span class="title-s">Job Role: </span> <span>Senior Data Analyst</span></p> -->
-										<!-- <p><span class="title-s">Experience: </span> <span>5 Years 3 Months</span></p> -->
-										<!-- <p><span class="title-s">Address: </span> <span>Bengaluru, India</span></p> -->
-									  <!-- </div> -->
+									  <!-- <div class="about-info">
+										<p><span class="title-s">Name: </span> <span>Rishabh Mishra</span></p>
+										<p><span class="title-s">Job Role: </span> <span>Senior Data Analyst</span></p>
+										<p><span class="title-s">Experience: </span> <span>5 Years 3 Months</span></p>
+										<p><span class="title-s">Address: </span> <span>Bengaluru, India</span></p>
+									  </div> -->
 									<!-- </div> -->
 								  <!-- </div> -->
 
-								<!-- <div class="skill-mf"> -->
-									<!-- <p class="title-s">Skills</p> -->
-									<!-- <span>SQL</span> <span class="pull-right">95%</span> -->
-									<!-- <div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0"
-											aria-valuemax="100"></div>
-									</div> -->
-									
-									<!-- <span>PYTHON</span> <span class="pull-right">85%</span> -->
-									<!-- <div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
-											aria-valuemax="100"></div>
-									</div> -->
-									
-									<!-- <span>Data Visualization</span> <span class="pull-right">90%</span> -->
-									<!-- <div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0"
-											aria-valuemax="100"></div>
-									</div> -->
-									
-									<!-- <span>Statistical Analysis</span> <span class="pull-right">85%</span> -->
-									<!-- <div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
-											aria-valuemax="100"></div>
-									</div> -->
-									
-									<!-- <span>Machine Learning</span> <span class="pull-right">80%</span> -->
-									<!-- <div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0"
-											aria-valuemax="100"></div>
-									</div> -->
-								<!-- </div> -->
+								
 							</div>
 						</div>
 					</div>
 					
-					<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+					<!-- <div class="col-md-6 col-lg-7 pl-lg-5 pb-5"> -->
 						<div class="row justify-content-start pb-3">
-							<div class="col-md-12 heading-section ftco-animate">
+							<div class="col-md-7 heading-section ftco-animate">
 								
 								<!-- <h1 class="big">About</h1> -->
-								<h2 class="mb-4">About </h2>
+								<h2 class="mb-4" >About </h2>
 								
-								<p>Greetings! I'm Vismay Walde, a passionate and versatile individual currently pursuing my B.Tech in Mathematics and Computing from IIT Ropar. With an insatiable curiosity and a drive for continuous learning, I eagerly explore various domains of computer science, including web development, Competitive Programming and machine learning.</p>
+								<p>Greetings! I'm Vismay Walde, a passionate and curious individual currently pursuing my B.Tech in Mathematics and Computing at IIT Ropar. I enjoy exploring the intersections of data, code, and real-world impact through hands-on projects and continuous learning.</p>
 
-								  <p>I embarked on a journey to expand my horizons and deepen my understanding of the intricate world of technology. With each new endeavor, I embrace the challenges and opportunities presented, immersing myself in the process of creating innovative and impactful solutions.</p>	
+								  <p>My journey spans experiences in data analytics, full-stack web development, and machine learning, where I’ve worked on projects like a News Conspiracy Detection System, Instagram User Analytics, and operational dashboards using SQL, Flask, React, and PostgreSQL. I take pride in crafting applications that are not only functional but also user-centric and insightful. I enjoy turning ideas into clean, efficient code.</p>	
 									
-									<p>Join me on this thrilling expedition as we navigate the ever-evolving landscape of computer science, driven by the shared goal of creating a brighter future through technology. Together, let's embrace the challenges, seize the opportunities, and pave the way for innovation and progress.</p>
-								<!-- <ul class="about-info mt-4 px-md-0 px-2"> -->
+									<p>Whether it’s analyzing user engagement data, building clean web interfaces, or integrating AI models into production-ready systems, I thrive on solving meaningful problems through technology. Let’s connect and collaborate on creating smart, meaningful, and forward-thinking tech solutions together!</p>
+								   <p><br><br></p>
+									<!-- <ul class="about-info mt-4 px-md-0 px-2"> -->
 									<!-- <li class="d-flex"><span>Profile:</span> <span>Data Science &amp; Analytics</span></li> -->
 									<!-- <li class="d-flex"><span>Domain:</span> <span>Retail, Ecommerce, BFSI &amp; Digital Marketing</span></li> -->
 									<!-- <li class="d-flex"><span>Education:</span> <span>Bachelor of Engineering</span></li> -->
@@ -300,6 +514,90 @@
 								<!-- </ul> -->
 							</div>
 						</div>
+						<br>
+
+
+
+                            <br> 
+							<br>
+                         <div class="skill-mf container ">
+							<h2 class="mb-4" id="skills-section" style="font-weight: bold;">Skills</h2>
+							<div class="row gy-4">
+							  <div class="col-md-6">
+								<span>SQL</span> <span class="float-end">90%</span>
+								<div class="progress">
+								  <div class="progress-bar bg-warning" style="width: 90%;"></div>
+								</div>
+							  </div>
+						  
+							  <div class="col-md-6">
+								<span>Python</span> <span class="float-end">85%</span>
+								<div class="progress">
+								  <div class="progress-bar bg-warning" style="width: 85%;"></div>
+								</div>
+							  </div>
+						  
+							  <div class="col-md-6">
+								<span>React.js</span> <span class="float-end">90%</span>
+								<div class="progress">
+								  <div class="progress-bar bg-warning" style="width: 90%;"></div>
+								</div>
+							  </div>
+
+							  <div class="col-md-6">
+								<span>HTML/CSS/JavaScript</span> <span class="float-end">80%</span>
+								<div class="progress">
+								  <div class="progress-bar bg-warning" style="width: 80%;"></div>
+								</div>
+							  </div>
+						  
+							  <div class="col-md-6">
+								<span>PostgreSQL</span> <span class="float-end">80%</span>
+								<div class="progress">
+								  <div class="progress-bar bg-warning" style="width: 80%;"></div>
+								</div>
+							  </div>
+							  <div class="col-md-6">
+								<span>Machine Learning (Scikit-learn, NLTK)</span> <span class="float-end">70%</span>
+								<div class="progress">
+								  <div class="progress-bar bg-warning" style="width: 70%;"></div>
+								</div>
+							  </div>
+						  
+							
+						  
+							  <div class="col-md-6">
+								<span>Excel </span> <span class="float-end">85%</span>
+								<div class="progress">
+								  <div class="progress-bar bg-warning" style="width: 85%;"></div>
+								</div>
+							  </div>
+
+							  <div class="col-md-6">
+								<span>Git & GitHub</span> <span class="float-end">80%</span>
+								<div class="progress">
+								  <div class="progress-bar bg-warning" style="width: 80%;"></div>
+								</div>
+							  </div>
+
+							  <div class="col-md-6">
+								<span>Data Visualization (MySQL Workbench, Matplotlib)</span> <span class="float-end">75%</span>
+								<div class="progress">
+								  <div class="progress-bar bg-warning" style="width: 75%;"></div>
+								</div>
+							  </div>
+						  
+							  <div class="col-md-6">
+								<span>C/C++</span> <span class="float-end">90%</span>
+								<div class="progress">
+								  <div class="progress-bar bg-warning" style="width: 90%;"></div>
+								</div>
+							  </div>
+							</div>
+						  </div>
+						  
+						    
+
 
 
 						<!-- <div class="counter-wrap ftco-animate d-flex mt-md-3">
@@ -344,6 +642,24 @@
 		<!-- <br> -->
 		
 		<div class="row">
+
+			<div class="justify-content-center zoom-effect">
+				<div class="resume-wrap ">
+					<span class="date">Data Analytics Intern</span>
+					<h2>Trainity  - Internship </h2>
+					<span class="position">Sept 2024 - Nov 2024</span>
+					<p class="mt-4">
+						<ul>
+							<li> Focused on data cleaning, transformation and deriving insights from real datasets using Python, SQL and Excel.                 </li>
+							<li> Practiced building analytics-ready datasets and ensuring data quality for downstream ML and BI applications.                   </li>
+							<li>Gained exposure to data Analytics workflows, including pipeline simulation and ensuring data quality for - analytics.     </li>
+						</ul>
+					</p>
+				</div>
+
+			</div>
+
+
 				<div class="justify-content-center zoom-effect">
 					<div class="resume-wrap ">
 						<span class="date">AI Trainer</span>
@@ -351,9 +667,9 @@
 						<span class="position">Aug 2024 - Present</span>
 						<p class="mt-4">Model Training and Fine-Tuning 
 							<ul>
-								<li> Developed and implemented strategies for training and fine-tuning large language models (LLMs).                 </li>
+								<li> Developed and implemented strategies for training and fine-tuning large language models (LLMs).                    </li>
 								<li> Utilized state-of-the-art techniques to enhance the performance and accuracy of language models.                   </li>
-								<li>Analyzed model outputs and metrics to identify areas for improvement and implement necessary adjustments.     </li>
+								<li>Analyzed model outputs and metrics to identify key areas for improvement and implement necessary adjustments.           </li>
 							</ul>
 						</p>
 					</div>
@@ -383,14 +699,14 @@
 					<div class="justify-content-center zoom-effect">
 						<div class="resume-wrap">
 							<span class="date">JP Morgan Software Engineering Virtual Experience</span>
-							<h2>Forage - Virtual Internship/Experience</h2>
+							<h2>Forage - Certification Program</h2>
 							<span class="position">July 2024 - Aug 2024</span>
 							<p class="mt-4">
 								<ul>
 									<li>Set up a local dev environment by downloading the necessary files, tools and dependencies.</li>
 									<li>Made an Open Source contribution by fixing broken files in the repository to make the web application output <br/> 
 										correctly.</li>
-									<li>Used JPMorgan Chase's open source library called Perspective to generate a live graph that displays  data feed<br/> in a clear and visually appealing way for traders to monitor.</li>
+									<li>Used JPMorgan Chase's open source library called Perspective to generate a live graph that displays  data feed in a <br/>clear and visually appealing way for traders to monitor.</li>
 								</ul>
 							</p>
 						</div>
@@ -469,7 +785,7 @@
 		  <p>     Enthusiastic and Motivated Mathematics and Computing student. Eager to apply problem-solving skills, programming expertise, and knowledge of web technologies to contribute to innovative projects.</p>
 			  <div class="row justify-content-center mt-5">
 				 <div class="col-md-6 text-center ftco-animate">
-					   <p><a href="https://acrobat.adobe.com/id/urn:aaid:sc:AP:4730f1da-a62b-4166-8e1b-bdb5c3a0b61f" class="btn btn-primary py-4 px-5 zoom-effect">Download CV</a></p>
+					   <p><a href="https://drive.google.com/file/d/1y0yGeI-mOwZuoZZClStIapYVIM4pvpuB/view?usp=sharing" class="btn btn-primary py-4 px-5 zoom-effect">Download CV</a></p>
 				  </div>
 			  </div>  
 		</div>
@@ -490,19 +806,19 @@
         <div class="row d-flex">
           <div class="col-md-4 d-flex ftco-animate">
           	<div class="blog-entry justify-content-end">
-              <a href="https://file-management-irwi.onrender.com/" class="block-20 zoom-effect" style="background-image: url('images/proj_3.jpg');">
+              <a href="https://github.com/vismaywalde/File-Upload-and-Download-System" class="block-20 zoom-effect" style="background-image: url('./images/github.jpg');">
               </a>
               <div class="text mt-3 float-right d-block">
 
-                <h3 class="heading"><a href="https://github.com/vismaywalde/file-management">File Upload & Download System </a></h3>
-                <p>Allows users to upload files to a GitHub repository using the GitHub API and download files from the repository, with future plans to integrate AI models for data processing</p>
+                <h3 class="heading"><a href="https://github.com/vismaywalde/File-Upload-and-Download-System">File Upload & Download System for Github </a></h3>
+				<p>Built a web app for uploading and downloading files to a GitHub repo via its API. It uses HTML, CSS (Bootstrap), JavaScript, Node.js with Express.js, Multer for file uploads, and Axios for HTTP requests, with secure token management through environment variables.</p>
               </div>
             </div>
           </div>
 
           <div class="col-md-4 d-flex ftco-animate">
           	<div class="blog-entry justify-content-end">
-              <a href="https://github.com/vismaywalde/B-plus-tree" class="block-20 zoom-effect" style="background-image: url('images/proj_4.jpg');">
+              <a href="https://github.com/vismaywalde/B-plus-tree" class="block-20 zoom-effect" style="background-image: url('./images/bplus.jpg');">
               </a>
               <div class="text mt-3 float-right d-block">
 
@@ -512,17 +828,19 @@
             </div>
           </div>
 
-          <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry">
-              <a href="https://github.com/vismaywalde/CS101-Project" class="block-20 zoom-effect" style="background-image: url('./images/cybersecurity4.webp');">
-              </a>
-              <div class="text mt-3 float-right d-block">
+		  <div class="col-md-4 d-flex ftco-animate">
+			<div class="blog-entry justify-content-end">
+			<a href="https://github.com/vismaywalde/Instagram-User-Analytics-using-SQL" class="block-20 zoom-effect" style="background-image: url('./images/insta\ 5.jpg');">
+			</a>
+			<div class="text mt-3 float-right d-block">
 
-                <h3 class="heading"><a href="https://github.com/vismaywalde/CS101-Project">FINDING LOOPHOLES IN DIFFIE-HELLMAN KEY EXCHANGE ALGORITHM</a></h3>
-                <p>Conducted a concise examination and analysis of the Diffie-Hellman key exchange algorithm, including its mathematical aspects and potential attacks, with detailed breakdowns of each. </p>
-              </div>
-            </div>
-          </div>
+			  <h3 class="heading"><a href="https://github.com/vismaywalde/Instagram-User-Analytics-using-SQL">Instagram User Analytics using SQL</a></h3>
+		      <p>Used SQL in MySQL Workbench to analyze Instagram user data, identifying loyal users, inactive accounts, top hashtags, optimal ad campaign days, and detecting bots, providing valuable insights for product, marketing, and investor reports.</p>
+			</div>
+		  </div>
+		</div>
+
+         
         </div>
 
 <!-- 		
@@ -539,38 +857,93 @@
 		</div>
 	  </div> -->
 
-	  
+	  <br>
+
+	  <div class="row d-flex">
+		<div class="col-md-4 d-flex ftco-animate">
+			<div class="blog-entry justify-content-end">
+			<a href="https://to-do-task-web-app.netlify.app/" class="block-20 zoom-effect" style="background-image: url('./images/todo\ 2.jpg');">
+			</a>
+			<div class="text mt-3 float-right d-block">
+
+			  <h3 class="heading"><a href="https://to-do-task-web-app.netlify.app/">To-Do Task Manager</a></h3>
+			  <br>
+			  <p>Developed a responsive To-Do Task Manager in React.js with features to add, edit, complete, and delete tasks, using local storage for persistence. It includes a task counter, real-time updates, also deployed on Netlify for easy access.</p>
+			</div>
+		  </div>
+		</div>
+
+		<div class="col-md-4 d-flex ftco-animate">
+			<div class="blog-entry justify-content-end">
+			<a href="https://github.com/vismaywalde/Smart-Door-Lock-System" class="block-20 zoom-effect" style="background-image: url('./images/iot.jpeg');">
+			</a>
+			<div class="text mt-3 float-right d-block">
+
+			  <h3 class="heading"><a href="https://github.com/vismaywalde/Smart-Door-Lock-System">Three-Factor Smart Door <br>(IoT Security System)</a></h3>
+			  <p>
+				Created an IoT-based security system with a Raspberry Pi, MySQL database, RFID reader, LCD touchscreen. The system uses RFID and fingerprint scanning for security and features real-time monitoring, access logs and an alarm that triggers after multiple failed attempts.</p>
+			</div>
+		  </div>
+		</div>
+
+		<div class="col-md-4 d-flex ftco-animate">
+			<div class="blog-entry">
+			<a href="https://github.com/vismaywalde/perfume-shop" class="block-20 zoom-effect" style="background-image: url('./images/e\ commerce.webp');">
+			</a>
+			<div class="text mt-3 float-right d-block">
+
+			  <h3 class="heading"><a href="https://github.com/vismaywalde/perfume-shop">Perfume Shop - Full Stack <br> E-commerce Website</a></h3>
+			  <p>Perfume Shop is a full-stack e-commerce web application for browsing perfumes. The project uses React.js for the frontend, Node.js and Express for the backend, and MongoDB as the database. This application allows users to browse products, view details and add reviews. </p>
+			</div>
+		  </div>
+		</div>
+	  </div>
+
+
      
 	<br>
 	  
-	
-		<!-- added justify-content-center to center align the last two projects -->
-		<div class="row d-flex justify-content-center">  
-			<div class="col-md-4 d-flex ftco-animate">
-				<div class="blog-entry justify-content-end">
-				<a href="https://vismay-waldes-drum-game.netlify.app/" class="block-20 zoom-effect" style="background-image: url('./images/proj_1.jpg');">
-				</a>
-				<div class="text mt-3 float-right d-block">
-  
-				  <h3 class="heading"><a href="https://vismay-waldes-drum-game.netlify.app/">Drum Kit Game</a></h3>
-				  <p>Developed a Drum Kit Game using HTML, CSS and JavaScript</p>
-				</div>
-			  </div>
+	<div class="row d-flex">
+		<div class="col-md-4 d-flex ftco-animate">
+			<div class="blog-entry">
+			<a href="https://github.com/vismaywalde/CS101-Project" class="block-20 zoom-effect" style="background-image: url('./images/cybersecurity4.webp');">
+			</a>
+			<div class="text mt-3 float-right d-block">
+
+			  <h3 class="heading"><a href="https://github.com/vismaywalde/CS101-Project">FINDING LOOPHOLES IN DIFFIE-HELLMAN KEY EXCHANGE ALGORITHM</a></h3>
+			  <p>Conducted a concise examination and analysis of the Diffie-Hellman key exchange algorithm, including its mathematical aspects and potential attacks, with detailed breakdowns of each. </p>
 			</div>
-			<div class="col-md-4 d-flex ftco-animate">
-				<div class="blog-entry justify-content-end">
-				<a href="https://vismay-waldes-startup-website.netlify.app/" class="block-20 zoom-effect" style="background-image: url('images/proj_5.jpg');">
-				</a>
-				<div class="text mt-3 float-right d-block">
-  
-				  <h3 class="heading"><a href="https://vismay-waldes-startup-website.netlify.app/">StartUp Website</a></h3>
-				  <p>Created a Static StartUp Website  using BootStrap</p>
-				</div>
-			  </div>
+		  </div>
+		</div>
+
+		<div class="col-md-4 d-flex ftco-animate">
+			<div class="blog-entry justify-content-end">
+			<a href="https://github.com/vismaywalde/Operation-Analytics-and-Investigating-Metric-Spike" class="block-20 zoom-effect" style="background-image: url('images/proj_4.jpg');">
+			</a>
+			<div class="text mt-3 float-right d-block">
+
+			  <h3 class="heading"><a href="https://github.com/vismaywalde/Operation-Analytics-and-Investigating-Metric-Spike">Operation Analytics and Investigating Metric Spike</a></h3>
+			  <p>Performed advanced SQL analysis on job and user data to derive insights for operational improvement, including job review trends, language share, weekly engagement, growth, and retention metrics using MySQL Workbench.</p>
 			</div>
-			
-		 </div>
+		  </div>
+		</div>
+
+		<div class="col-md-4 d-flex ftco-animate">
+			<div class="blog-entry">
+			<a href="https://github.com/vismaywalde/perfume-shop" class="block-20 zoom-effect" style="background-image: url('https://images.theconversation.com/files/284418/original/file-20190717-173334-1b9vdud.jpg?ixlib=rb-4.1.0&rect=0%2C350%2C6490%2C3240&q=45&auto=format&w=1356&h=668&fit=crop');">
+			</a>
+			<div class="text mt-3 float-right d-block">
+
+			  <h3 class="heading"><a href="https://github.com/vismaywalde/perfume-shop">News Conspiracy Detection System</a></h3>
+			  <p>The AI-Powered News Aggregator is a web-based application that analyzes news headlines and assigns a Conspiracy Score (0-100%) using ML models. The system helps detect clickbait, misinformation, and neutral news dynamically, empowering users to evaluate the credibility of headlines. </p>
+			</div>
+		  </div>
+		</div>
 	  </div>
+
+     <br>
+
+
     </section>
 
 	<section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
@@ -723,6 +1096,79 @@
   <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
 
 
+
+  <div id="chatbot-container" >
+	<div id="chatbot-hover-area">
+		<a href="./chatbot.html"><button id="chatbot-toggle" class ="zoom-effect" ><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0 0 50 50"
+		style="fill:#000000;">
+		<path d="M 25 4.5 C 15.204 4.5 5.9439688 11.985969 3.9179688 21.542969 C 3.9119687 21.571969 3.9200156 21.599906 3.9160156 21.628906 C 1.5620156 23.233906 -0.04296875 26.383 -0.04296875 30 C -0.04296875 35.238 3.3210312 39.5 7.4570312 39.5 C 7.7850313 39.5 8.0913438 39.339313 8.2773438 39.070312 C 8.4643437 38.800312 8.5065781 38.456438 8.3925781 38.148438 C 8.3775781 38.110438 6.9550781 34.244 6.9550781 29.5 C 6.9550781 24.506 8.3091719 22.022187 8.3261719 21.992188 C 8.5011719 21.683187 8.4983125 21.305047 8.3203125 20.998047 C 8.1433125 20.689047 7.8130313 20.5 7.4570312 20.5 C 7.0350313 20.5 6.62275 20.554625 6.21875 20.640625 C 8.58675 12.613625 16.57 6.5 25 6.5 C 32.992 6.5 40.688641 12.044172 43.431641 19.576172 C 43.133641 19.530172 42.831438 19.5 42.523438 19.5 C 42.169438 19.5 41.841109 19.689094 41.662109 19.996094 C 41.482109 20.302094 41.481297 20.683187 41.654297 20.992188 C 41.668297 21.016188 43.023437 23.5 43.023438 28.5 C 43.023438 32.44 42.045078 35.767641 41.705078 36.806641 C 40.558078 37.740641 38.815344 39.034297 36.777344 40.154297 C 36.016344 39.305297 34.839391 38.871437 33.650391 39.148438 L 31.867188 39.560547 C 31.024188 39.753547 30.308609 40.262094 29.849609 40.996094 C 29.391609 41.728094 29.245453 42.598453 29.439453 43.439453 C 29.783453 44.935453 31.11975 45.949219 32.59375 45.949219 C 32.83275 45.949219 33.074359 45.923188 33.318359 45.867188 L 35.103516 45.457031 C 35.945516 45.264031 36.661141 44.752531 37.119141 44.019531 C 37.503141 43.406531 37.653984 42.700187 37.583984 41.992188 C 39.728984 40.830188 41.570453 39.483422 42.814453 38.482422 C 46.814453 38.286422 50.023438 34.114 50.023438 29 C 50.023438 25.237 48.284437 21.989172 45.773438 20.451172 C 45.769438 20.376172 45.777859 20.301563 45.755859 20.226562 C 43.152859 11.113563 34.423 4.5 25 4.5 z M 12 19 C 11.447 19 11 19.447 11 20 L 11 32 C 11 32.553 11.447 33 12 33 L 28.044922 33 C 27.540922 34.057 26.743578 35.482375 26.142578 36.484375 C 25.941578 36.819375 25.954828 37.2405 26.173828 37.5625 C 26.360828 37.8395 26.673 38 27 38 C 27.055 38 27.109063 37.995328 27.164062 37.986328 C 33.351062 36.955328 38.412 32.95125 38.625 32.78125 C 38.862 32.59125 39 32.304 39 32 L 39 20 C 39 19.447 38.553 19 38 19 L 12 19 z M 18.5 23 C 19.902 23 21 24.317 21 26 C 21 27.683 19.902 29 18.5 29 C 17.098 29 16 27.683 16 26 C 16 24.317 17.098 23 18.5 23 z M 31.5 23 C 32.902 23 34 24.317 34 26 C 34 27.683 32.902 29 31.5 29 C 30.098 29 29 27.683 29 26 C 29 24.317 30.098 23 31.5 23 z"></path>
+		</svg></button></a>
+		
+	  <div id="chatbox">
+		<p>Hello there! 👋<br>Click to chat with Vismay's AI Assistant 🚀
+
+		</p>
+	  </div>
+	</div>
+  </div>
+  
+
+
+
+  <!-- #FFFFFF -->
+
+
+
+ <!-- Floating Chatbot Button -->
+ <!-- <div id="chatbot-container"  >
+    <button id="chatbot-toggle" class="zoom-effect">💬</button>
+
+    <div class="hidden" id="chatbot-box" >
+      <div id="chatbot-header">Ask Vismay 💬</div>
+      <div id="chat-log">Hello! I'm the helpful chatbot for Vismay Walde's portfolio.  <br>  Is there anything specific you'd like to know about Vismay? </div>
+      <form id="chat-form">
+        <input type="text" id="user-input" placeholder="Ask something..." required />
+        <button type="submit" class="zoom-effect">Send</button>
+      </form>
+    </div>
+
+  </div> -->
+
+
+
+  <!-- Chat Button -->
+   <!-- <div id="chatbot-container" > <button id="chat-toggle-btn" class="zoom-effect" onclick="toggleChat()">💬</button></div>
+ 
+
+  
+  <! Chatbot Box -->
+  <!-- <div id="chatbox-box" class="hidden">
+	<div class="chatbot-header">Ask Vismay 💬
+	  <span>Chatbot</span>
+	  <button onclick="toggleChat()">✖</button>
+	</div>
+	<div class="chat-body"> -->
+	  <!-- Chat content here -->
+	<!-- </div>
+  </div> --> 
+  
+<script>  function toggleChat() {
+	const chatbox = document.getElementById("chatbot-box");
+	const button = document.getElementById("chatbot-toggle");
+  
+	if (chatbox.classList.contains("hidden")) {
+	  chatbox.classList.remove("hidden");
+	  button.style.display = "none"; // Hide the button
+	} else {
+	  chatbox.classList.add("hidden");
+	  button.style.display = "block"; // Show the button again
+	}
+  }</script>
+
+  
+
+
+
   <script src="js/jquery.min.js"></script>
   <script src="js/jquery-migrate-3.0.1.min.js"></script>
   <script src="js/popper.min.js"></script>
@@ -738,5 +1184,21 @@
   
   <script src="js/main.js"></script>
     
+ 
+  <!-- <script>
+	window.addEventListener('DOMContentLoaded', () => {
+	  const toggleBtn = document.getElementById('chatbot-toggle');
+	  const chatBox = document.getElementById('chatbot-box');
+  
+	  toggleBtn.addEventListener('click', () => {
+		chatBox.classList.toggle('hidden');
+	  });
+	});
+  </script> -->
+  
+
+  <!-- Chatbot Script -->
+<script src="./chatbot.js"></script>
+
   </body>
 </html>
