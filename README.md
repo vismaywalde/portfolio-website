@@ -1,27 +1,94 @@
-# Vismay Walde - Personal Website
+# Vismay Walde - Personal Portfolio Website with Chatbot Integration
 
-Welcome to the repository for my personal website. This project showcases my professional portfolio, including my background, skills, projects, and contact information.
+Welcome to the repository for my **Personal Portfolio Website**. This project highlights my background, skills, resume, projects, and provides an integrated chatbot to answer questions related to my profile.
 
+---
 
+## 🔍 Assignment Overview
 
-## About
+This project was developed as part of an intern prescreening assignment and fulfills the following key objectives:
 
-This personal website is designed to provide a comprehensive overview of my professional journey and achievements. It includes sections such as Home, About, Resume, Projects, and Contact.
+### ✅ 1. Create a Personal Portfolio Webpage
+An interactive and responsive personal website that includes:
 
-## Features
+- **Introduction**: A brief overview about myself.
+- **Skills**: My key technical skills with a focus on Data and DevOps.
+- **Resume Overview**: Link to download my resume in PDF format.
+- **Contact**: Interactive buttons linking to:
+  - LinkedIn  
+  - GitHub  
+  - Email  
 
-- **Home Section**: A brief introduction with an animated typing effect.
-- **About Section**: Detailed information about my background and interests.
-- **Resume Section**: Overview of my education and experience with a link to download my CV.
-- **Projects Section**: Showcase of my key projects with descriptions and links to their repositories.
-- **Contact Section**: Ways to get in touch with me.
+The webpage is:
+- 📱 **Responsive** (works on both desktop and mobile)
+- 🎨 **Well-structured** and visually appealing
 
-## Technologies Used
+### ✅ 2. Integrate a Chatbot
+- Integrated a chatbot using an **open-source LLM**.
+- Hosted via **Groq Cloud / Together AI** (based on prompt-tuned LLM).
+- The chatbot can respond to queries about:
+  - My resume  
+  - Work experience  
+  - Skills  
+  - Projects  
+  - Certifications
+- Added as an **interactive button** (bottom-right corner of the screen).
 
-- HTML
-- CSS
-- JavaScript
-- Bootstrap
-- jQuery
-- Font Awesome
-- Owl Carousel
+### ✅ 3. Demonstrate DevOps Skills
+- Used **Git** for version control
+- Deployed the portfolio website using **Netlify**
+- Shared GitHub repository and deployed website link (see below)
+
+---
+
+## 💡 Features
+
+- **Modern UI** with responsive design
+- **Chatbot Integration** for real-time Q&A
+- **Animated typing effect** in hero section
+- **Carousel and effects** using Bootstrap and jQuery
+- **Resume PDF Download**
+- **Deployed on Netlify**
+
+---
+
+## 🛠️ Tech Stack
+
+- **Frontend**: HTML, CSS, JavaScript
+- **Frameworks/Libraries**: Bootstrap, jQuery, Owl Carousel
+- **Icons**: Font Awesome
+- **Chatbot Hosting**: Groq Cloud / Together AI
+- **Version Control**: Git & GitHub
+- **Deployment**: Netlify
+
+---
+
+## 📎 Links
+
+- 🔗 **Portfolio Link**: [https://your-portfolio.netlify.app](https://your-portfolio.netlify.app)  
+- 🔗 **GitHub Repository**: [https://github.com/yourusername/portfolio-chatbot](https://github.com/yourusername/portfolio-chatbot)  
+
+---
+
+## 📌 Chatbot Placement
+
+The chatbot button is placed in the **bottom-right corner** of the webpage for optimal accessibility and non-intrusive interaction.
+
+---
+
+## 📋 Evaluation Criteria (from assignment)
+
+- ✅ Quality and responsiveness of the portfolio webpage  
+- ✅ Seamless integration and functionality of the chatbot  
+- ✅ Proper use of version control and deployment strategy  
+
+---
+
+## 🕒 Submission Details
+
+- ✅ **Portfolio Link** and **GitHub Repository** shared
+- ⏱️ **Deadline**: Submitted within 48 hours of assignment receipt
+
+---
+
+Feel free to explore the project and reach out via the contact section on the website! 🙂
