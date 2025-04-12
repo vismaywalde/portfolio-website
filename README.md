@@ -25,7 +25,7 @@ The webpage is:
 
 ### ✅ 2. Integrate a Chatbot
 - Integrated a chatbot using an **open-source LLM**.
-- Hosted via **Groq Cloud / Together AI** (based on prompt-tuned LLM).
+- Hosted via **Groq Cloud (based on prompt-tuned LLM).
 - The chatbot can respond to queries about:
   - My resume  
   - Work experience  
@@ -55,9 +55,9 @@ The webpage is:
 ## 🛠️ Tech Stack
 
 - **Frontend**: HTML, CSS, JavaScript
-- **Frameworks/Libraries**: Bootstrap, jQuery, Owl Carousel
+- **Frameworks/Libraries**: jQuery, Owl Carousel
 - **Icons**: Font Awesome
-- **Chatbot Hosting**: Groq Cloud / Together AI
+- **Chatbot Hosting**: Groq Cloud
 - **Version Control**: Git & GitHub
 - **Deployment**: Netlify
 
@@ -65,8 +65,8 @@ The webpage is:
 
 ## 📎 Links
 
-- 🔗 **Portfolio Link**: [https://your-portfolio.netlify.app](https://your-portfolio.netlify.app)  
-- 🔗 **GitHub Repository**: [https://github.com/yourusername/portfolio-chatbot](https://github.com/yourusername/portfolio-chatbot)  
+- 🔗 **Portfolio Link**: [https://your-portfolio.netlify.app](https://vismays-portfolio.netlify.app/)  
+- 🔗 **GitHub Repository**: [https://github.com/yourusername/portfolio-chatbot](https://github.com/vismaywalde/portfolio-website)  
 
 ---
 
